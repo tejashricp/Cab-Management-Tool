@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'com.cab.mgmt'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.3.4.RELEASE'
+    testImplementation('org.springframework.boot:spring-boot-starter-test:2.2.6.RELEASE')
+    compileOnly 'org.projectlombok:lombok:1.18.4'
+    testCompile 'org.projectlombok:lombok:1.18.4'
+    compile 'commons-io:commons-io:2.6'
+    annotationProcessor 'org.projectlombok:lombok:1.18.4'
+}
+
+test {
+    useJUnitPlatform()
+}
